@@ -1,16 +1,4 @@
 import { CapabilityCard } from './CapabilityCard.js';
-
-type LeaderboardEntry = { teamName: string; totalPoints: number; rank: number };
-
 export default function Leaderboard() {
-  return (
-    <CapabilityCard<LeaderboardEntry, 'leaderboard'>
-      title="Leaderboard"
-      description="Compare team point totals."
-      endpoint="/api/leaderboard"
-      dataKey="leaderboard"
-      emptyMessage="No leaderboard rankings yet."
-      renderItem={(entry) => `${entry.rank}. ${entry.teamName} - ${entry.totalPoints} points`}
-    />
-  );
+  return <CapabilityCard title="Leaderboard" description="Compare team point totals." />;
 }
