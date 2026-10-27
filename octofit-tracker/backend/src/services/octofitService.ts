@@ -20,7 +20,7 @@ export async function createActivity(input: unknown) {
     !type.trim() ||
     typeof minutes !== 'number' ||
     !Number.isFinite(minutes) ||
-    minutes <= 0
+    minutes < 1
   ) {
     throw Object.assign(new Error('Activity payload is invalid'), { status: 400 });
   }
